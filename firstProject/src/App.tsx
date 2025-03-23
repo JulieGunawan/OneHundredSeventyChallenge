@@ -1,5 +1,7 @@
 import './App.scss'
+import DropDownMenu from './components/dropdown/DropDownMenu'
 import BellIcon from './components/icons/BellIcon'
+import CaretIcon from './components/icons/CaretIcon'
 import MessengerIcon from './components/icons/MessengerIcon'
 import PlusIcon from './components/icons/PlusIcon'
 import NavBar from './components/navBar/NavBar'
@@ -15,6 +17,9 @@ function App() {
       <NavItem icon={<PlusIcon />} />
       <NavItem icon={<BellIcon />} />
       <NavItem icon={<MessengerIcon />} />
+      <NavItem icon={<CaretIcon />}>
+        <DropDownMenu />
+      </NavItem>
     </NavBar>       
    
     </>

@@ -1,0 +1,29 @@
+.dropdown {
+    position: absolute;
+    right: 10px;
+    top: 110px;
+    width: 300px;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow:hidden;
+    padding: 1rem;
+}
+
+.menu-item {
+    height:50px;
+    display:flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: background var(--speed);
+    padding: 0.5rem;
+
+    &:hover {
+        background-color: #f2f2f2;
+    }
+
+    .icon-right {
+        margin-left: auto;
+    }
+}
