@@ -1,10 +1,8 @@
+import { useState } from "react";
 import ChevronIcon from "../icons/ChevronIcon";
 import CogIcon from "../icons/CogIcon";
 import "./DropDownMenu.scss"
-
-// type DropDownMenuProps = {
-//     children: React.ReactNode;
-// }
+import {CSSTransition} from 'react-transition-group';
 
 type DropDownItemProps = {
     children: React.ReactNode;
@@ -12,6 +10,8 @@ type DropDownItemProps = {
     rightIcon?: React.ReactNode;
 }
 const DropDownMenu = () =>{
+    const [activeMenu, setActiveMenu] = useState('main');
+
     const DropdownItem = (props: DropDownItemProps) =>{
         return (
             <a href="#" className="menu-item">
@@ -23,10 +23,19 @@ const DropDownMenu = () =>{
     }
     return(
         <div className="dropdown">
-            <DropdownItem>My Profile</DropdownItem>
-            <DropdownItem leftIcon={<CogIcon/>} rightIcon={<ChevronIcon/>}>
-                Settings
-            </DropdownItem>
+            <CSSTransition 
+                in={activeMenu === 'main'} 
+                unmountOnExit 
+                timeout={500} 
+                classNames="menu-primary"
+            >
+                <div className="menu">
+                    <DropdownItem>My Profile</DropdownItem>
+                    <DropdownItem leftIcon={<CogIcon/>} rightIcon={<ChevronIcon/>}>
+                        Settings
+                    </DropdownItem>
+                </div>
+            </CSSTransition>
         </div>
     )
 }

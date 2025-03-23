@@ -7,7 +7,6 @@ import PlusIcon from './components/icons/PlusIcon'
 import NavBar from './components/navBar/NavBar'
 import NavItem from './components/navItem/NavItem'
 
-
 function App() {
 
 
