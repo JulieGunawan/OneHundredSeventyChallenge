@@ -13,7 +13,6 @@ type DropDownItemProps = {
 }
 const DropDownMenu = () =>{
     const [activeMenu, setActiveMenu] = useState('main');
-
     const nodeRefPrimary = useRef(null);
     const nodeRefSecondary = useRef(null);
 
@@ -26,9 +25,9 @@ const DropDownMenu = () =>{
             </a>
         )
     }
-    console.log("activeMenu", activeMenu)
+    
     return(
-        <div className="dropdown" >
+        <div className="dropdown"  >
             <CSSTransition 
                 in={activeMenu === 'main'} 
                 nodeRef={nodeRefPrimary}
@@ -57,6 +56,27 @@ const DropDownMenu = () =>{
             >
                  <div className="menu" ref={nodeRefSecondary}>
                     <DropdownItem leftIcon={<ArrowIcon />} goToMenu="main">Settings</DropdownItem>
+                    <DropdownItem>
+                        Settings
+                    </DropdownItem>
+                    <DropdownItem>
+                        Settings
+                    </DropdownItem>
+                    <DropdownItem>
+                        Settings
+                    </DropdownItem>
+                    <DropdownItem>
+                        Settings
+                    </DropdownItem>
+                    <DropdownItem>
+                        Settings
+                    </DropdownItem>
+                    <DropdownItem>
+                        Settings
+                    </DropdownItem>
+                    <DropdownItem>
+                        Settings
+                    </DropdownItem>
                     <DropdownItem>
                         Settings
                     </DropdownItem>
