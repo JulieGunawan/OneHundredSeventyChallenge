@@ -6,13 +6,13 @@ type NavItemProps = {
     children?: React.ReactNode
 }
 const NavItem = (props:NavItemProps) => {
-    const [open, setOpen] = useState(false);
-    return (
-        <li className="nav-item">
-            <a href="#" className="icon-button" onClick={() => setOpen(!open)}>{props.icon}</a>
-            {open && props.children}
-        </li>
-    )
+  const [open, setOpen] = useState(false);
+  return (
+    <li className="nav-item">
+      <a href="#" className="icon-button" onClick={() => setOpen(!open)}>{props.icon}</a>
+      {open && props.children}
+    </li>
+  )
 }
 
 export default NavItem;

@@ -12,14 +12,14 @@ function App() {
 
   return (
     <>
-    <NavBar>
-      <NavItem icon={<PlusIcon />} />
-      <NavItem icon={<MessengerIcon />} />
-      <NavItem icon={<BellIcon />} />
-      <NavItem icon={<CaretIcon />}>
-        <DropDownMenu />
-      </NavItem>
-    </NavBar>       
+      <NavBar>
+        <NavItem icon={<PlusIcon />} />
+        <NavItem icon={<MessengerIcon />} />
+        <NavItem icon={<BellIcon />} />
+        <NavItem icon={<CaretIcon />}>
+          <DropDownMenu />
+        </NavItem>
+      </NavBar>       
    
     </>
   )
